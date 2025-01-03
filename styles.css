@@ -10,6 +10,15 @@ header {
     color: white;
     padding: 20px;
     text-align: center;
+    position: relative;
+}
+
+.header-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px auto; /* Centrer l'image et ajouter un espace avec le texte */
+    border-radius: 8px; /* Arrondir les coins de l'image si nécessaire */
 }
 
 nav {

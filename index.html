@@ -1,49 +1,158 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GAT Assurances - Avenue de la Liberté</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raouf GAT - Assurance</title>
+  <!-- Font Awesome pour les icônes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Poppins', sans-serif; background: #f9f9f9; color: #333; }
+
+    header {
+      background: #004080;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header h1 { margin-bottom: 5px; font-size: 2rem; }
+    nav a {
+      color: #ffcc00;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    nav a:hover { color: #fff; }
+
+    /* Hero avec image */
+    .hero {
+      background: url('entete.png') center/cover no-repeat;
+      height: 350px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+      font-size: 2.2rem;
+      font-weight: bold;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    section { padding: 50px 20px; max-width: 1000px; margin: auto; }
+    section h2 { text-align: center; margin-bottom: 30px; color: #004080; }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: slideUp 1s ease forwards;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .card i {
+      font-size: 2.5rem;
+      color: #ff6600;
+      margin-bottom: 15px;
+    }
+    .card h3 { margin-bottom: 10px; color: #004080; }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .contact {
+      background: #004080;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      border-radius: 8px;
+      animation: fadeIn 2s ease-in-out;
+    }
+    .contact a { color: #ffcc00; text-decoration: none; font-weight: bold; }
+
+    footer {
+      background: #00264d;
+      color: #ccc;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
-    <header>
-       <img src="entete.png" alt="GAT Assurances" class="header-image">
-        <p>Bienvenue à GAT Assurances</p>
-        <p>Votre tranquillité d'esprit, notre priorité.</p>
-    </header>
 
+  <header>
+    <h1>Raouf GAT Assurance</h1>
     <nav>
-        <a href="#services">Nos Services</a>
-        <a href="#contact">Contact</a>
-        <a href="#horaires">Horaires</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
     </nav>
+  </header>
 
-    <section id="services">
-        <h2>Nos Services</h2>
-        <ul>
-            <li><strong>Assurance Habitation :</strong> Protection contre les fuites d'eau, vitres brisées, et plus encore.</li>
-            <li><strong>Assurance Auto :</strong> Profitez d'une réduction de 15 % jusqu'au 30/06/2025.</li>
-            <li><strong>Autres Services :</strong> Santé, vie, entreprise.</li>
-        </ul>
-    </section>
+  <div class="hero">
+    Votre sécurité, notre priorité
+  </div>
 
-    <section id="contact">
-        <h2>Contactez-nous</h2>
-        <p>Adresse : 131, Avenue de la Liberté, Tunis.</p>
-        <p>Téléphone : 71 792 234 / 94 868 873 / 55 951 722</p>
-        <p>Email : <a href="mailto:mohamedraouf.saidi@gat.com.tn">mohamedraouf.saidi@gat.com.tn</a></p>
-    </section>
+  <section id="services">
+    <h2>Nos Services</h2>
+    <div class="services">
+      <div class="card">
+        <i class="fas fa-car"></i>
+        <h3>Auto</h3>
+        <p>Assurance automobile complète pour protéger votre véhicule et vos trajets.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-home"></i>
+        <h3>Habitation</h3>
+        <p>Protégez votre maison et vos biens contre les imprévus.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-heartbeat"></i>
+        <h3>Santé</h3>
+        <p>Des solutions adaptées pour prendre soin de votre santé et celle de vos proches.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-user-shield"></i>
+        <h3>Vie</h3>
+        <p>Assurance vie pour garantir l’avenir de votre famille.</p>
+      </div>
+    </div>
+  </section>
 
-    <section id="horaires">
-        <h2>Horaires</h2>
-        <p><strong>Lundi au vendredi :</strong> 8h00 à 12h00 et 13h00 à 17h00</p>
-        <p><strong>Samedi :</strong> 8h30 à 12h00</p>
-        <p><strong>Ramadan :</strong> 7h30 à 13h30 (lundi-vendredi), 8h30 à 12h00 (samedi).</p>
-    </section>
+  <section id="contact">
+    <h2>Contactez-nous</h2>
+    <div class="contact">
+      <p>📞 Téléphone : +216 99 999 999</p>
+      <p>📧 Email : <a href="mailto:contact@raouf-gat.tn">contact@raouf-gat.tn</a></p>
+      <p>📍 Adresse : Tunis, Tunisie</p>
+    </div>
+  </section>
 
-    <footer>
-        <p>© 2025 GAT Assurances - Avenue de la Liberté</p>
-    </footer>
+  <footer>
+    © 2026 Raouf GAT Assurance - Tous droits réservés
+  </footer>
+
 </body>
 </html>
+
